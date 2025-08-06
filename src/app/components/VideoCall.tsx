@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import Peer from 'peerjs';
+import Peer, { MediaConnection } from 'peerjs';
 import { FaPhone, FaPhoneSlash, FaMicrophone, FaMicrophoneSlash, FaVideo, FaVideoSlash } from 'react-icons/fa';
 import ClientOnly from './ClientOnly';
 
@@ -27,7 +27,7 @@ export default function VideoCall({ username }: VideoCallProps) {
   const remoteVideoRef = useRef<HTMLVideoElement>(null);
   const localStreamRef = useRef<MediaStream | null>(null);
   // Using more specific type for the connection reference
-  const connectionRef = useRef<Peer.MediaConnection | null>(null);
+  const connectionRef = useRef<MediaConnection | null>(null);
 
   // Update actualUsername when username prop changes
   useEffect(() => {
@@ -58,8 +58,7 @@ export default function VideoCall({ username }: VideoCallProps) {
         iceCandidatePoolSize: 10
       },
       // Increase timeout for connections
-      pingInterval: 5000,
-      retryTimers: [1000, 3000, 5000]
+      pingInterval: 5000
     });
 
     // Connection timeout
@@ -200,7 +199,7 @@ export default function VideoCall({ username }: VideoCallProps) {
   }, [actualUsername]); // Depend on the state variable to trigger reconnection
 
   // Helper function to handle incoming calls
-  const handleIncomingCall = (call: Peer.MediaConnection, stream: MediaStream) => {
+  const handleIncomingCall = (call: MediaConnection, stream: MediaStream) => {
     localStreamRef.current = stream;
     if (localVideoRef.current) {
       localVideoRef.current.srcObject = stream;
