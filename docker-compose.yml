@@ -6,7 +6,7 @@ services:
     container_name: peerjs-poc
     restart: unless-stopped
     ports:
-      - "3000:3000"
+      - "3333:3000"
     environment:
       - NODE_ENV=production
       - NEXT_TELEMETRY_DISABLED=1
