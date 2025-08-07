@@ -128,7 +128,7 @@ This project can be deployed using Docker and Docker Compose for easy setup and 
    docker-compose up -d
    ```
 
-3. Access the application at [http://localhost:3000](http://localhost:3000)
+3. Access the application at [http://localhost:3333](http://localhost:3333)
 
 4. To stop the container:
    ```bash
@@ -154,7 +154,7 @@ If you encounter issues with the Docker setup:
    docker compose logs
    ```
 
-3. **Port Conflicts**: If port 3000 is already in use on your host machine, modify the port mapping in docker-compose.yml:
+3. **Port Conflicts**: If port 3333 is already in use on your host machine, modify the port mapping in docker-compose.yml:
    ```yaml
    ports:
      - "3001:3000"  # Change 3001 to any available port
