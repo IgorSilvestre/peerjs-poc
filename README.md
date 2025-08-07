@@ -10,7 +10,6 @@ A simple proof-of-concept application for peer-to-peer video calls using [PeerJS
   - Starting/ending calls
   - Muting/unmuting audio
   - Enabling/disabling video
-- Light and dark theme support with system preference detection
 - Responsive design that works on both desktop and mobile devices
 
 ## How It Works
