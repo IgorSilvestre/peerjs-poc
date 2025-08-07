@@ -72,7 +72,7 @@ export default function VideoCall({ username }: VideoCallProps) {
 
     // Set up event listeners
     newPeer.on('open', (id) => {
-      console.log('%c🔑 Your Peer ID: ' + id, 'background: #4CAF50; color: white; padding: 4px 8px; border-radius: 4px; font-weight: bold;');
+      console.log('%c🔑 Your Peer ID: ' + id);
       console.log('Copy this ID and share it with someone to start a call');
       setPeerId(id);
       setConnectionStatus('connected');
