@@ -2,6 +2,8 @@
 
 A simple proof-of-concept application for peer-to-peer video calls using [PeerJS](https://peerjs.com/) and [Next.js](https://nextjs.org).
 
+*See a demo at [call.igorsilvestre.dev](call.igorsilvestre.dev)*
+
 ## Features
 
 - Real-time peer-to-peer video calls
