@@ -60,7 +60,6 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - Built with Next.js 15.4.5 and React 19.1.0
 - Uses PeerJS for WebRTC peer-to-peer connections
 - Styled with Tailwind CSS
-- Theme switching with next-themes (light/dark/system)
 - Fully typed with TypeScript
 
 ## Limitations
